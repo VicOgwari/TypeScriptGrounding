@@ -3,12 +3,14 @@ if (age < 50)
     age += 10;
 console.log(age);
 
-//Arrays
+//Arrays vs Tuples
 let numbers = ["1", "2", "3"];
+let mixedData1 = ["WAV", 4567, true];
+let myTuple: [string, number, boolean] = ["WAV", 4567, true];
 numbers.forEach(n => console.log(n));
 
 //Tuples
-let assorts: [number, string] = [22, "The quick brown fox!"];
+let assortTuple: [number, string, boolean] = [22, "The quick brown fox!", false];
 
 //Enum using PascalCase
 const enum Size {Small = 1, Medium, Large};
@@ -33,6 +35,7 @@ type Employee = {
 
 }
 let employee: Employee = {id: 1, name: "Vic", retire: (date: Date) => { console.log(date);}};
+let employee1: Employee = {id: 2, name: "Mike", retire: (date: Date) => { console.log(date);}}
 
 //Union types
 function kgToLbs(weight: number | string): number{
